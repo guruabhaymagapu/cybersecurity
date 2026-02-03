@@ -27,3 +27,21 @@ Set up environment for hands-on networking labs, starting with Packet Tracer sim
 ### Verification
 - Successfully pinged router (192.168.1.1) from PC1, PC2, and Server
 
+
+## Day 4 – DHCP Configuration
+
+### Objective
+-Configured DHCP on the router with a pool for the 192.168.1.0/24 network.
+-Excluded static IP addresses and verified dynamic IP assignment.
+
+### DHCP Settings
+- PC0 received 192.168.1.10
+- PC1 received 192.168.1.11
+- Server received 192.168.1.12
+- Default gateway assigned as 192.168.1.1
+- DNS Server: 8.8.8.8
+
+### Verification
+- PCs and Server received IPs via DHCP
+- Successful ping to router and between hosts
+
