@@ -45,3 +45,33 @@ Set up environment for hands-on networking labs, starting with Packet Tracer sim
 - PCs and Server received IPs via DHCP
 - Successful ping to router and between hosts
 
+## Day 5 – Subnetting & Network Segmentation
+
+### Objective
+Implemented subnetting to divide a /24 network into two /25 networks to understand logical segmentation and inter-subnet routing from a SOC perspective.
+
+### Subnet Design
+- Subnet A: 192.168.1.0/25 (PC0, PC1)
+- Subnet B: 192.168.1.128/25 (Server)
+
+### Topology
+- Two Layer-2 segments using separate switches
+- Router configured with two FastEthernet interfaces
+- Each interface mapped to a distinct subnet
+
+### Configuration Summary
+- Router FastEthernet0/0: 192.168.1.1/25
+- Router FastEthernet0/1: 192.168.1.129/25
+- End devices configured with static IP addressing
+
+### Verification
+- Successful intra-subnet communication (PC0 ↔ PC1)
+- Successful inter-subnet routing (PC0 ↔ Server)
+- Router interfaces verified as up/up
+
+### Evidence
+Screenshots captured:
+- Router interface status
+- PC0 IP configuration
+- Server IP configuration
+- Successful inter-subnet ping
