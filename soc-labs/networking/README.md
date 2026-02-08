@@ -75,3 +75,17 @@ Screenshots captured:
 - PC0 IP configuration
 - Server IP configuration
 - Successful inter-subnet ping
+
+## Day 6 – VLAN Configuration (Layer 2 Segmentation)
+
+### Objective
+Configured VLANs to segment user and server traffic at Layer 2.
+
+### VLAN Design
+- VLAN 10 (USERS): PC0, PC1
+- VLAN 20 (SERVERS): Server
+- VLAN 99 (MGMT): Reserved
+
+### Verification
+- Intra-VLAN communication successful
+- Inter-VLAN communication blocked as expected
