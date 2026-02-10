@@ -89,3 +89,16 @@ Configured VLANs to segment user and server traffic at Layer 2.
 ### Verification
 - Intra-VLAN communication successful
 - Inter-VLAN communication blocked as expected
+
+
+## Day 7 – Inter-VLAN Routing (Router-on-a-Stick)
+
+### Objective
+Enabled communication between VLANs using router subinterfaces and 802.1Q trunking.
+
+### Configuration
+- Switch port configured as trunk
+- Router subinterfaces created for VLAN 10 and VLAN 20
+
+### Verification
+- Successful inter-VLAN communication between users and server
