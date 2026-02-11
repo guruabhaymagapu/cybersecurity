@@ -1,12 +1,20 @@
-# Networking Lab with Cisco Packet Tracer
+# SOC Labs – Networking Basics ✅
 
+**Status:** Completed (Day 1–8)  
+
+This repository contains hands-on labs for Cisco Networking Basics, completed using Packet Tracer.  
+All topologies, IP addressing, VLANs, inter-VLAN routing, and wireless configurations have been verified and documented.  
+
+# Networking Lab with Cisco Packet Tracer
+    
 ## Objective
 Set up environment for hands-on networking labs, starting with Packet Tracer simulations for cybersecurity fundamentals.
 
 ## Day 1 - Environment Setup
 -  Created GitHub repo: cybersecurity  
 -  Installed Cisco Packet Tracer
--  Folder structure: screenshots/ + README.md
+-  Folder structure initialized for documentation and lab evidence
+
 
 ## Day 2 — Network Topology (Physical Layer)
 
@@ -88,7 +96,12 @@ Configured VLANs to segment user and server traffic at Layer 2.
 
 ### Verification
 - Intra-VLAN communication successful
-- Inter-VLAN communication blocked as expected
+- Inter-VLAN communication not possible (no Layer 3 routing configured)
+
+### Note: From Day 6 onward, the lab transitions from physical subnetting
+> (multiple router interfaces) to VLAN-based logical segmentation using
+> a single trunk link (Router-on-a-Stick).
+
 
 
 ## Day 7 – Inter-VLAN Routing (Router-on-a-Stick)
@@ -102,3 +115,20 @@ Enabled communication between VLANs using router subinterfaces and 802.1Q trunki
 
 ### Verification
 - Successful inter-VLAN communication between users and server
+
+### Day 8 – Wireless Router + Wireless Client
+- **Added devices:** Wireless Router, Laptop (wireless client)  
+- **Configuration:** 
+  - SSID: NETBASICS
+  - WPA2 Personal, password: Cisco123
+  - Laptop got IP 192.168.10.100 via DHCP
+  - Default gateway: 192.168.10.1
+- **Verification:** Laptop successfully pinged Wireless Router
+- **Screenshots:** day8_laptop_ip.png, day8_ping_test.png, day8_topology.png
+
+## ✅ Networking Basics – Module Completion
+
+All **Day 1–8 labs** have been successfully completed.  
+
+- Topologies, IP addressing, VLANs, inter-VLAN routing, and wireless connectivity fully verified  
+- Screenshots and documentation captured for each lab day
