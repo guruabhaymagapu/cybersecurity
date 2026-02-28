@@ -74,3 +74,43 @@ day3_failed_login_alert_created.png
 - Scheduled alert configuration for detecting multiple failed login attempts in Splunk Enterprise.
 day3_failed_login_dashboard_panel.png
 - SOC Security Monitoring Dashboard panel visualizing failed login attempts over time.
+
+
+### Day 4 – Windows Account Lockout Detection (EventID 4740)
+
+- Simulated repeated failed authentication attempts on a local Windows test account (SOC_Test) to trigger account lockout events.
+- Generated Windows Security EventID 4740 (Account Lockout) using PowerShell-based network authentication attempts.
+- Verified ingestion of account lockout events in the windows index within Splunk Enterprise.
+- Observed that EventID 4740 logs do not contain source IP address information in standalone Windows environments.
+- Developed detection logic to monitor account lockout activity using TargetUserName.
+- Created a scheduled alert to detect account lockout events in near real-time (every 5 minutes).
+- Configured alert severity as Medium to represent identity-based security risk.
+- Validated alert triggering through simulated lockout activity.
+
+```SPL Query Used
+index=windows source="WinEventLog:Security" "<EventID>4740</EventID>"
+| rex field=_raw "<Data Name='TargetUserName'>(?<TargetUserName>[^<]+)</Data>"
+| stats count by TargetUserName
+| where count >= 1
+| sort -count
+```
+
+### Challenges Faced
+
+- Windows Security EventID 4740 logs do not contain IpAddress fields in non-domain environments.
+- Authentication attempts from the Windows lock screen may not generate consistent account lockout events.
+- Manual login attempts were restricted by Windows Security after multiple failures.
+- Network-based authentication attempts using PowerShell were required to reliably simulate account lockout behavior.
+
+### SOC Relevance
+
+- In enterprise SOC environments:
+- Account lockout events may indicate brute-force password attacks or unauthorized access attempts.
+- Monitoring EventID 4740 is critical for detecting identity-based attack patterns.
+- Lockout detection assists SOC teams in identifying compromised user accounts and enforcing incident response procedures.
+
+### Screenshots
+- day4_4740_spl_query.png
+- day4_4740_alert_config.png
+- day4_account_lockout_alert.png
+- day4_triggered_account_lockout.png

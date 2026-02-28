@@ -1,0 +1,9 @@
+
+```SPL Query Used
+index=windows source="WinEventLog:Security" "<EventID>4625</EventID>"
+| rex field=_raw "<Data Name='TargetUserName'>(?<TargetUserName>[^<]+)</Data>"
+| rex field=_raw "<Data Name='IpAddress'>(?<IpAddress>[^<]+)</Data>"
+| stats count by TargetUserName IpAddress
+| where count >= 5
+| sort -count
+```
