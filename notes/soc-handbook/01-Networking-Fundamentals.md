@@ -1,6 +1,5 @@
 📘 01 – Networking Fundamentals 
 
-# 🔹 SECTION 1 – Why Networking Exists
 
 ---
 
@@ -100,9 +99,6 @@ Understanding how devices are connected helps analysts:
 * Investigate internal attacks
 * Monitor network behavior
 
----
-
-# 🔹 SECTION 2 – Types of Networks
 
 ---
 
@@ -198,9 +194,6 @@ Helps detect:
 * Internal attacker movement
 * Unauthorized internal access
 
----
-
-# 🔹 SECTION 3 – Basic Network Devices
 
 ---
 
@@ -299,7 +292,6 @@ Firewalls generate logs used by SOC analysts to detect:
 * Malicious traffic
 
 ---
-
 
 
 ## **Q14. What is a MAC Address?**
