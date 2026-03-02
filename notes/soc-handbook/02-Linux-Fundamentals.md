@@ -1,6 +1,5 @@
----
 
-# 02 – Linux Fundamentals (SOC Relevant)
+📘 02 – Linux Fundamentals (SOC Relevant)
 
 ## 🎯 Objective
 
