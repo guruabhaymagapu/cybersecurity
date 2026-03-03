@@ -827,21 +827,6 @@ SOC Analysts use networking to:
 ---
 
 
-For a **SOC L1 – Networking Fundamentals**, what you’ve covered till **Q41** is already:
-
-✅ Correct
-✅ In logical flow
-✅ Interview-relevant
-✅ Enough for log analysis understanding
-✅ Enough for SIEM alert investigation
-
-But… from an actual **SOC investigation perspective**, you are still missing a few **very important operational networking concepts** that analysts *regularly see in logs*.
-
-These are not CCNA-level theory — these are **SOC-useful networking basics**.
-
----
-
-
 ## **Q42. What is NAT (Network Address Translation)?**
 
 NAT converts:
