@@ -1,4 +1,4 @@
-## 📘 SOC Analyst Playbook – Level 1
+## 📘 SOC Analyst Playbook 
 
 ---
 
